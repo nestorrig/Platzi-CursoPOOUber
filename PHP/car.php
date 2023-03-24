@@ -10,6 +10,6 @@ class Car {
         $this->driver = new Account($driver->name, $driver->document);
     }
     public function PrintDataCar(){
-        echo "Car license: $this->license and driver: {$this->driver->name}";
+        echo "Car license: $this->license and driver: {$this->driver->name} <br/>";
     }
 }
