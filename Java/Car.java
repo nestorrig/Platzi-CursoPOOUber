@@ -4,12 +4,12 @@ class Car {
     String driver;
     Integer passegenger;
 
-    public Car(String license, Account driver){
+    public Car(String license, String driver){
         this.license = license;
-        this.driver = driver
+        this.driver = driver;
     }
 
     void printDataCar() {
-        System.out.println("License: " + license + " Name Driver: " + driver.name);
+        System.out.println("License: " + license + " Name Driver: " + driver);
     }
 }

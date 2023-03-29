@@ -1,5 +1,9 @@
 class Payment {
-    constructor() {
-        this.id;
+    constructor(id, amount) {
+        this.id = id;
+        this.amount = amount;
+    }
+    PrintDataPayment(){
+        console.table(this)
     }
 }
