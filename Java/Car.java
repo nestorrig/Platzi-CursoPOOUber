@@ -2,7 +2,7 @@ class Car {
     Integer id;
     String license;
     String driver;
-    Integer passegenger;
+    Integer passenger;
 
     public Car(String license, String driver){
         this.license = license;

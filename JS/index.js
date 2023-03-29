@@ -16,3 +16,8 @@ let payment2 = new Cash(2, 1200, 5000);
 payment2.PrintDataPayment();
 let payment3 = new Card(3, 1200, "Santander", 2027, 265);
 payment3.PrintDataPayment();
+
+let account0 = new User(0, "Nestor Rios", "Passport", "anitalahuerfanita@plaxi.com", "contraseña");
+account0.PrintDataAccount();
+let account1 = new Driver(0, "Fulgencio Lopez", "License", "elfulges99@vivamex.com", "1234");
+account1.PrintDataAccount()
