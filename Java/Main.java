@@ -2,12 +2,22 @@ class Main {
     public static void main(String[] args) {
         System.out.println("Hola Mundo");
         Car car = new Car("AMQ123", "Andres Herrera");
-        car.passenger = 4;
+        car.setPassenger(3);
         car.printDataCar();
 
         Car car2 = new Car("QWE567","Andrea Herrera");
-        car2.passenger = 3;
+        car2.setPassenger(3);
         car2.printDataCar();
+
+        UberX uberX = new UberX("SADF4655", "Nestor Rios", "Audi", "TT");
+        uberX.setPassenger(4);
+        uberX.printDataCarUberX();
+        UberPool uberPool = new UberPool("PHGY4230", "Cortana", "VW", "Golf GTI");
+        uberPool.setPassenger(3);
+        uberPool.printDataCarUberPool();
+        // UberVan uberVan = new UberVan("PHGY4230", "Cortana", "VW", "Golf GTI");
+        // uberVan.setPassenger(3);
+        // uberVan.printDataCarUberVan();
 
         Payment payment0 = new Payment(0, 1000);
         payment0.printDataPayment();
