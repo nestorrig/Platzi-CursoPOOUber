@@ -8,20 +8,9 @@ public class UberPool extends Car {
         this.model = model;
     }
 
-    void printDataCarUberPool() {
-        if (passenger != null) {
-            System.out.println("License: " + license + " Name Driver: " + driver + " Brand: " + brand + " Model: " + model + " Passengers: " + passenger);
-        }
-    }
-
-    public Integer getPassenger(){
-        return passenger;
-    }
-    public void setPassenger(Integer passenger){
-        if (passenger == 3) {
-            this.passenger = passenger;
-        } else {
-            System.out.println("Necesitas agregar 3 pasajeros");
-        }
+    @Override
+    void printDataCar() {
+        super.printDataCar();
+        System.out.println("Modelo: " + model + " Brand: " + brand);
     }
 }

@@ -8,21 +8,10 @@ class UberX extends Car {
         this.model = model;
     }
 
-    void printDataCarUberX() {
-        if (passenger != null) {
-            System.out.println("License: " + license + " Name Driver: " + driver + " Brand: " + brand + " Model: " + model + " Passengers: " + passenger);
-        }
-    }
-
-    public Integer getPassenger(){
-        return passenger;
-    }
-    public void setPassenger(Integer passenger){
-        if (passenger == 4) {
-            this.passenger = passenger;
-        } else {
-            System.out.println("Necesitas agregar 4 pasajeros");
-        }
+    @Override
+    void printDataCar() {
+        super.printDataCar();
+        System.out.println("Modelo: " + model + " Brand: " + brand);
     }
 
 }

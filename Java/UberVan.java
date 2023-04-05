@@ -1,32 +1,21 @@
+import java.util.Map;
+import java.util.ArrayList;
+
 public class UberVan extends Car {
     Map<String, Map<String, Integer>> typeCarAccepted;
     ArrayList<String> seatsMaterial;
 
-    public UberVan(
-        String license,
-        String driver,
-        Map<String, Map<String, Integer>> typeCarAccepted,
-        ArrayList<String> seatsMaterial,
-        ){
+    public UberVan(String license,String driver){
             super(license, driver);
-            this.typeCarAccepted = typeCarAccepted;
-            this.seatsMaterial = seatsMaterial;
     }
 
-    void printDataCarUberVan() {
-        if (passenger != null) {
-            System.out.println("License: " + license + " Name Driver: " + driver + " Type Car: " + typeCarAccepted + " Seat Material: " + seatsMaterial + " Passengers: " + passenger);
-        }
-    }
-
-    public Integer getPassenger(){
-        return passenger;
-    }
-    public void setPassenger(Integer passenger){
-        if (passenger == 6) {
+    @Override
+    public void setPassenger(Integer passenger) {
+        if(passenger == 6){
             this.passenger = passenger;
-        } else {
-            System.out.println("Necesitas agregar 6 pasajeros");
+        }else{
+            System.out.println("Necesitas asignar 6 pasajeros");
         }
     }
+
 }
