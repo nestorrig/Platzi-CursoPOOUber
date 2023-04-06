@@ -2,6 +2,8 @@
 require_once('car.php');
 require_once('uberX.php');
 require_once('uberPool.php');
+require_once('uberVan.php');
+require_once('uberBlack.php');
 
 require_once('account.php');
 require_once('User.php');
@@ -13,10 +15,18 @@ require_once('cash.php');
 require_once('card.php');
 
 echo "<br/> CARS <br/>";
-$uberX = new UberX("ÑPO6846", new Account("Nestor Rios", "PTKS8124", 0, 0, 0, 0), "Chevrolet", "Spark");
+$uberX = new UberX("ÑPO6846", "Nestor Rios", "Chevrolet", "Spark");
+$uberX->setPassenger(4);
 $uberX->printDataCar();
-$uberPool = new UberPool("DHP752", new Account("Carlos Martinez", "GNTD5647", 0, 0, 0, 0), "Dodge", "Attitude");
+$uberPool = new UberPool("DHP752", "Carlos Martinez", "Dodge", "Attitude");
+$uberPool->setPassenger(3);
 $uberPool->printDataCar();
+$uberVan = new UberVan("DHP752", "Gabriel Martinez", "Rang Rover", "Sintetic");
+$uberVan->setPassenger(5);
+$uberVan->printDataCar();
+$uberBlack = new UberBlack("DHP752", "Gabriel Martinez", "Audi TT", "Leather");
+$uberBlack->setPassenger(5);
+$uberBlack->printDataCar();
 echo "<br/> PAYMENTS <br/>";
 $payment0 = new Payment(0, 1000);
 $payment0->PrintDataPayment();

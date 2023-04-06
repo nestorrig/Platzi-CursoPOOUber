@@ -9,4 +9,11 @@ class UberBlack extends Car {
         $this->typerCarAccepted = $typerCarAccepted;
         $this->seatsMaterial = $seatsMaterial;
     }
+    public function PrintDataCar(){
+        parent::PrintDataCar();
+        echo" 
+        Car Type: $this->typerCarAccepted
+        Seats Material: $this->seatsMaterial
+        <br>";
+    }
 }
